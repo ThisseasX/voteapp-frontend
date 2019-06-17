@@ -1,0 +1,29 @@
+[ {
+  "candidateId" : 1,
+  "candidateName" : "Kwnstantinos",
+  "candidateSurname" : "Dekavallas"
+}, {
+  "candidateId" : 4,
+  "candidateName" : "Jon",
+  "candidateSurname" : "Snow"
+}, {
+  "candidateId" : 5,
+  "candidateName" : "Harry",
+  "candidateSurname" : "Potter"
+}, {
+  "candidateId" : 6,
+  "candidateName" : "Bruce",
+  "candidateSurname" : "Wayne"
+}, {
+  "candidateId" : 8,
+  "candidateName" : "Homer",
+  "candidateSurname" : "Simpson"
+}, {
+  "candidateId" : 9,
+  "candidateName" : "Luke",
+  "candidateSurname" : "Skywalker"
+}, {
+  "candidateId" : 10,
+  "candidateName" : "Optimus",
+  "candidateSurname" : "Prime"
+} ]

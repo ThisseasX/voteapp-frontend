@@ -1,0 +1,64 @@
+[ {
+  "candidate" : {
+    "candidateId" : 1,
+    "candidateName" : "Kwnstantinos",
+    "candidateSurname" : "Dekavallas"
+  },
+  "votes" : 8
+}, {
+  "candidate" : {
+    "candidateId" : 2,
+    "candidateName" : "Donald",
+    "candidateSurname" : "Trump"
+  },
+  "votes" : 3
+}, {
+  "candidate" : {
+    "candidateId" : 3,
+    "candidateName" : "Adolf",
+    "candidateSurname" : "Hitler"
+  },
+  "votes" : 0
+}, {
+  "candidate" : {
+    "candidateId" : 5,
+    "candidateName" : "Harry",
+    "candidateSurname" : "Potter"
+  },
+  "votes" : 1
+}, {
+  "candidate" : {
+    "candidateId" : 6,
+    "candidateName" : "Bruce",
+    "candidateSurname" : "Wayne"
+  },
+  "votes" : 1
+}, {
+  "candidate" : {
+    "candidateId" : 7,
+    "candidateName" : "Rick",
+    "candidateSurname" : "Astley"
+  },
+  "votes" : 1
+}, {
+  "candidate" : {
+    "candidateId" : 8,
+    "candidateName" : "Homer",
+    "candidateSurname" : "Simpson"
+  },
+  "votes" : 1
+}, {
+  "candidate" : {
+    "candidateId" : 9,
+    "candidateName" : "Luke",
+    "candidateSurname" : "Skywalker"
+  },
+  "votes" : 2
+}, {
+  "candidate" : {
+    "candidateId" : 10,
+    "candidateName" : "Optimus",
+    "candidateSurname" : "Prime"
+  },
+  "votes" : 2
+} ]
