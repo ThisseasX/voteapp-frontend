@@ -12,6 +12,7 @@ export default class MyNavbar extends Component {
 
   render() {
     const { name } = this.state;
+    
     return (
       <Navbar bg="dark" variant="dark" expand="md" fixed="top">
         <LinkContainer to="/vote">
