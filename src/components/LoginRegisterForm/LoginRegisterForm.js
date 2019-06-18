@@ -21,10 +21,14 @@ export default class LoginRegisterForm extends Component {
     }
 
     handleChange = (name, value) => {
+        if (name === 'name' || name === 'surname') {
+            value = value && value.toUpperCase();
+        }
+
         this.setState(prevState => ({
             [name]: {
                 ...prevState[name],
-                value: value
+                value
             }
         }));
     }
