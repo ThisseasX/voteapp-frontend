@@ -6,12 +6,12 @@ export default class LoginRegisterForm extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            id: { key: 1, name: 'id', type: 'number', placeholder: 'ID', value: '' },
-            name: { key: 2, name: 'name', type: 'text', placeholder: 'Name', value: '' },
-            surname: { key: 3, name: 'surname', type: 'text', placeholder: 'Surname', value: '' },
-            password: { key: 4, name: 'password', type: 'password', placeholder: 'Password', value: '' },
-            confirm: { key: 5, name: 'confirm', type: 'password', placeholder: 'Confirm Password', value: '' }
+        this.fields = {
+            id: { key: 1, name: 'id', type: 'number', placeholder: 'ID' },
+            name: { key: 2, name: 'name', type: 'text', placeholder: 'Name' },
+            surname: { key: 3, name: 'surname', type: 'text', placeholder: 'Surname' },
+            password: { key: 4, name: 'password', type: 'password', placeholder: 'Password' },
+            confirm: { key: 5, name: 'confirm', type: 'password', placeholder: 'Confirm Password' }
         };
 
         this.buttons = {
@@ -20,41 +20,18 @@ export default class LoginRegisterForm extends Component {
         }
     }
 
-    handleChange = (name, value) => {
-        if (name === 'name' || name === 'surname') {
-            value = value && value.toUpperCase();
-        }
-
-        this.setState(prevState => ({
-            [name]: {
-                ...prevState[name],
-                value
-            }
-        }));
-    }
-
-    handleSubmit = () => {
-        console.log(this.state);
-    }
-
     render() {
+        const { id, name, surname, password, confirm } = this.fields;
+        const { login, register } = this.buttons;
+
         const loginForm = {
-            fields: [
-                this.state.id,
-                this.state.password
-            ],
-            submit: this.buttons.login
+            fields: [id, password],
+            submit: login
         };
 
         const registerForm = {
-            fields: [
-                this.state.id,
-                this.state.name,
-                this.state.surname,
-                this.state.password,
-                this.state.confirm,
-            ],
-            submit: this.buttons.register
+            fields: [id, name, surname, password, confirm],
+            submit: register
         };
 
         const form = this.props.match.path === '/login'
@@ -62,7 +39,7 @@ export default class LoginRegisterForm extends Component {
             : registerForm;
 
         return (
-            <Form form={form} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
+            <Form form={form} />
         );
     }
 }
