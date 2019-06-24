@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import styles from './MyError.module.sass';
 
 export default ({ error }) => {
+  
   if (!error) return null;
   const { message, small } = error;
   

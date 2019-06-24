@@ -26,5 +26,5 @@ export default () => {
     values,
     handleChange,
     handleSubmit
-  }
+  };
 };
