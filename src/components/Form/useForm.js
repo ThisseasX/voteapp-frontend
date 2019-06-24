@@ -4,13 +4,11 @@ export default () => {
   const [values, setValue] = useState({});
 
   const handleChange = (fieldName, value, transformationCallback) => {
-    let resultValue;
 
-    if (typeof transformationCallback === 'function') {
-      resultValue = transformationCallback(fieldName, value);
-    } else {
-      resultValue = value;
-    }
+    const resultValue =
+      (typeof transformationCallback === 'function')
+        ? transformationCallback(fieldName, value)
+        : value;
 
     setValue({
       ...values,
@@ -19,7 +17,7 @@ export default () => {
   };
 
   const handleSubmit = () => {
-    console.log(values)
+    console.log(values);
   };
 
   return {

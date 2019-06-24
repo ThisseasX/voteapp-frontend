@@ -6,17 +6,10 @@ import Button from 'react-bootstrap/Button';
 import Card, { Body } from 'react-bootstrap/Card';
 import useForm from './useForm';
 
-export default ({ form }) => {
-  
+export default ({ form, transformationCallback }) => {
+
   const { fields, submit } = form;
   const { values, handleChange, handleSubmit } = useForm();
-
-  const upperCaseNameAndSurname = (fieldName, value) => {
-    if (fieldName === 'name' || fieldName === 'surname')
-      return value && value.toUpperCase();
-    else
-      return value;
-  };
 
   return (
     <Row>
@@ -27,8 +20,8 @@ export default ({ form }) => {
               {fields.map(field => (
                 <Group key={field.key}>
                   <Control
-                    required
-                    onChange={(e) => { handleChange(field.name, e.target.value, upperCaseNameAndSurname); }}
+                    required={field.required}
+                    onChange={(e) => { handleChange(field.name, e.target.value, transformationCallback); }}
                     value={values[field.name] || ''}
                     type={field.type}
                     placeholder={field.placeholder}
